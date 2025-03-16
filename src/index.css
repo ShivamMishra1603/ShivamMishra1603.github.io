@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-primary text-textPrimary;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-4xl font-bold mb-8 text-center;
+  }
+  
+  .nav-link {
+    @apply cursor-pointer hover:text-secondary transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-secondary text-primary font-semibold rounded-lg
+    hover:bg-opacity-80 transition-all duration-300;
+  }
+} 
