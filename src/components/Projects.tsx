@@ -16,6 +16,16 @@ const Projects = () => {
       technologies: ["Python", "GraphQL", "TextBlob", "Data Analysis"]
     },
     {
+      title: "Llama Cure",
+      category: "Large Language Models",
+      github: "https://github.com/ShivamMishra1603/llama-cure",
+      description: [
+        "LlamaCure is a modern medical chatbot application that leverages the powerful Llama 3.2 90B Vision model through Groq's API to provide medical information and assistance.",
+        "The application features a full-stack implementation with a React TypeScript frontend and FastAPI Python backend."
+      ],
+      technologies: ["Python", "React", "FastAPI", "Llama 3.2 90B Vision", "LLM", "Tailwind CSS"]
+    },
+    {
       title: "Gesture Controlled Presentation",
       category: "Computer Vision",
       github: "https://github.com/ShivamMishra1603/Gesture-Controlled-Presentation",
@@ -35,6 +45,16 @@ const Projects = () => {
         "Achieved 87% training accuracy and generated coherent poetry with perplexity of 25"
       ],
       technologies: ["PyTorch", "LSTM", "NLP", "Deep Learning"]
+    },
+    {
+      title: "Swifty Scribe",
+      category: "Natural Language Processing",
+      github: "https://github.com/ShivamMishra1603/swifty-scribe",
+      description: [
+        "Developed an AI-driven lyrics generation application inspired by Taylor Swift's songwriting style, utilizing a recurrent neural network (RNN) with GRU cells, trained on a comprehensive dataset of her song lyrics.",
+        "Designed and implemented a sophisticated NLP pipeline with tokenization, word embeddings, and temperature-controlled text generation, ensuring contextually rich and creative lyrics with an authentic Taylor Swift-inspired feel"
+      ],
+      technologies: [ "GRU-RNN", "NLP", "Deep Learning", "Flask", "Transformers (Hugging Face)", "React"]
     },
     {
       title: "POS Tagging",
