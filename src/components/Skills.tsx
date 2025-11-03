@@ -13,9 +13,7 @@ import {
   SiGithub,
   SiPostman,
   SiVercel,
-  SiNetlify,
   SiFigma,
-  SiAdobexd,
   SiCplusplus,
   SiPytorch,
   SiPandas,
@@ -25,7 +23,15 @@ import {
   SiJquery,
   SiJson,
   SiAppian,
-  SiAmazon
+  SiAmazon,
+  SiStreamlit,
+  SiFlask,
+  SiDocker,
+  SiNginx,
+  SiHuggingface,
+  SiGithubactions,
+  SiGooglecloud,
+  SiTailwindcss
 } from 'react-icons/si'
 import { FaJava, FaCode } from 'react-icons/fa'
 
@@ -48,6 +54,7 @@ const Skills = () => {
       skills: [
         { name: "HTML", icon: <SiHtml5 /> },
         { name: "CSS", icon: <SiCss3 /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
         { name: "JavaScript", icon: <SiJavascript /> },
         { name: "TypeScript", icon: <SiTypescript /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
@@ -55,6 +62,41 @@ const Skills = () => {
         { name: "JSON", icon: <SiJson /> },
         { name: "React.js", icon: <SiReact /> },
         { name: "Express.js", icon: <SiExpress /> }
+      ]
+    },
+    {
+      title: "AI/ML & LLM",
+      skills: [
+        { name: "Google Gemini", icon: <SiGooglecloud /> },
+        { name: "LangChain", icon: <FaCode /> },
+        { name: "Hugging Face", icon: <SiHuggingface /> },
+        { name: "FAISS", icon: <FaCode /> },
+        { name: "RAG", icon: <FaCode /> }
+      ]
+    },
+    {
+      title: "Data Apps & Visualization",
+      skills: [
+        { name: "Streamlit", icon: <SiStreamlit /> },
+        { name: "Flask", icon: <SiFlask /> },
+        { name: "Plotly", icon: <FaCode /> }
+      ]
+    },
+    {
+      title: "DevOps & Deployment",
+      skills: [
+        { name: "Docker", icon: <SiDocker /> },
+        { name: "Nginx", icon: <SiNginx /> },
+        { name: "GitHub Actions", icon: <SiGithubactions /> },
+        { name: "CI/CD", icon: <FaCode /> }
+      ]
+    },
+    {
+      title: "Geospatial",
+      skills: [
+        { name: "GeoPandas", icon: <SiPandas /> },
+        { name: "Folium", icon: <FaCode /> },
+        { name: "Shapely", icon: <FaCode /> }
       ]
     },
     {
@@ -73,9 +115,8 @@ const Skills = () => {
         { name: "VS Code", icon: <FaCode /> },
         { name: "Postman", icon: <SiPostman /> },
         { name: "Vercel", icon: <SiVercel /> },
-        { name: "Netlify", icon: <SiNetlify /> },
+        { name: "Render", icon: <FaCode /> },
         { name: "Figma", icon: <SiFigma /> },
-        { name: "Adobe XD", icon: <SiAdobexd /> },
         { name: "Appian", icon: <SiAppian /> }
       ]
     }

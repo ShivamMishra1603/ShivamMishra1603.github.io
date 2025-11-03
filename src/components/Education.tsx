@@ -16,7 +16,7 @@ const Education = () => {
             <h4 className="text-xl font-semibold text-secondary">Stony Brook University</h4>
             <p className="text-textSecondary">Master of Science in Computer Science</p>
             <p className="text-textSecondary">August 2024 - May 2026</p>
-            <p className="text-textSecondary">GPA: 3.9/4</p>
+            <p className="text-textSecondary">GPA: 3.83/4</p>
             {/* <p className="text-textSecondary mt-2">Relevant Coursework:</p>
             <ul className="list-disc list-inside text-textSecondary mt-1">
               <li>Analysis of Algorithms</li>

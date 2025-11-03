@@ -6,8 +6,64 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
+      title: "VideoXplore",
+      category: "AI + Web Research",
+      github: "https://github.com/ShivamMishra1603/video-xplore",
+      description: [
+        "AI-powered video analysis with Google Gemini and integrated web research via DuckDuckGo",
+        "Production-ready Streamlit app with Docker, CI/CD, logging, and prompt customization",
+        "Live deployment with exportable analysis reports and configurable search depth"
+      ],
+      technologies: ["Python", "Streamlit", "Google Gemini", "DuckDuckGo Search", "Docker", "CI/CD"]
+    },
+    {
+      title: "RAG Bot",
+      category: "Retrieval-Augmented Generation",
+      github: "https://github.com/ShivamMishra1603/rag-bot/blob/main/README.md",
+      description: [
+        "Upload PDFs and chat with your documents using a Gemini-powered RAG pipeline",
+        "Local FAISS vector store with persistent storage and conversational memory",
+        "Clean Streamlit UI with real-time processing indicators"
+      ],
+      technologies: ["Python", "Streamlit", "FAISS", "LangChain", "HuggingFace Embeddings"]
+    },
+    {
+      title: "GenUI",
+      category: "Generative UI",
+      github: "https://github.com/ShivamMishra1603/gen-ui",
+      description: [
+        "Wireframe-to-code generator that turns sketches into clean HTML/CSS using Gemini",
+        "React frontend + Flask backend with health checks, analytics, and structured logging",
+        "Dockerized deployment with Nginx and Render-ready configuration"
+      ],
+      technologies: ["React", "Flask", "Google Gemini", "Docker", "Nginx"]
+    },
+    {
+      title: "Mobility-Based Resilience Analysis",
+      category: "Data Science",
+      github: "https://github.com/ShivamMishra1603/mobility-based-resilience-analysis/blob/main/README.md",
+      description: [
+        "Resilience triangle methodology over large-scale human mobility data (Port Arthur, TX)",
+        "Interactive Streamlit dashboard and reproducible analysis modules",
+        "Calculates resilience ratio, vulnerability, robustness, and recovery time"
+      ],
+      technologies: ["Python", "Pandas", "Streamlit", "Plotly", "pyreadr"]
+    },
+    {
+      title: "NYC Neighborhood Analysis",
+      category: "Geospatial Analysis",
+      github: "https://github.com/ShivamMishra1603/NYC-Neighborhood-Analysis/blob/main/README.md",
+      description: [
+        "Comprehensive geospatial study of services and accessibility across NYC neighborhoods",
+        "Spatial and statistical analysis with interactive mapping and composite indices",
+        "Integrates multiple datasets: hospitals, schools, parks, transit, and bike routes"
+      ],
+      technologies: ["GeoPandas", "Shapely", "Folium", "Pandas", "NumPy"]
+    },
+    {
       title: "Reliability of Student Feedback for Ranking University Teaching Quality",
       category: "Data Science",
+      github: "https://www.linkedin.com/in/shivammishra97/details/projects/1747942450165/single-media-viewer/?profileId=ACoAAElF3wQB87Xtv5NeaKllD6rAzEdn1egKrDY",
       description: [
         "Formulated a university ranking metric based on teaching quality using sentiment analysis and professor ratings",
         "Scraped 10,000+ professor reviews from 38 universities using GraphQL",
@@ -37,16 +93,6 @@ const Projects = () => {
       technologies: ["Python", "OpenCV", "Computer Vision", "Machine Learning"]
     },
     {
-      title: "Shakespeare Poetry Generator",
-      category: "Natural Language Processing",
-      description: [
-        "Built an LSTM-based RNN architecture using PyTorch for generating Shakespearean-style text",
-        "Processed 100,000+ word dataset with character-level tokenization",
-        "Achieved 87% training accuracy and generated coherent poetry with perplexity of 25"
-      ],
-      technologies: ["PyTorch", "LSTM", "NLP", "Deep Learning"]
-    },
-    {
       title: "Swifty Scribe",
       category: "Natural Language Processing",
       github: "https://github.com/ShivamMishra1603/swifty-scribe",
@@ -67,16 +113,6 @@ const Projects = () => {
         "Achieved accurate labeling of words with grammatical tags"
       ],
       technologies: ["Python", "NLTK", "Scikit-learn", "NLP"]
-    },
-    {
-      title: "Autonomous Car Prototype",
-      category: "IoT & Computer Vision",
-      description: [
-        "Led team of 4 to build self-driving car prototype using Raspberry Pi and Arduino",
-        "Implemented real-time lane detection and obstacle avoidance with 95% accuracy",
-        "Added self-parking feature using LiDAR sensors with 90% success rate"
-      ],
-      technologies: ["Raspberry Pi", "Arduino", "OpenCV", "YOLO", "IoT"]
     },
     {
       title: "Tokenization Techniques",
