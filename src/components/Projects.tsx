@@ -6,6 +6,26 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 const Projects = () => {
   const projects = [
     {
+      title: "AI Researcher",
+      category: "AI + Multi-Agent Systems",
+      github: "https://github.com/ShivamMishra1603/ai-researcher",
+      description: [
+        "Developed an AI system using LangGraph and GPT-4 to orchestrate four specialized agents, integrated ChromaDB vector database for semantic search and multi-source RAG retrieval; reduced information retrieval time and generated 6-8 page research reports with automatic citations",
+        "Deployed FastAPI backend with WebSocket streaming and Next.js 14 (TypeScript, Tailwind) frontend to AWS ECS Fargate via Terraform IaC (multi-AZ auto-scaling, ALB, RDS, Secrets Manager); built CI/CD pipeline with GitHub Actions, Docker 3-stage builds and pytest/integration tests"
+      ],
+      technologies: ["LangGraph", "GPT-4", "ChromaDB", "FastAPI", "Next.js", "TypeScript", "Tailwind CSS", "AWS ECS", "Terraform", "Docker", "GitHub Actions", "WebSocket"]
+    },
+    {
+      title: "Distributed Transaction Processing System",
+      category: "Distributed Systems",
+      github: "https://github.com/ShivamMishra1603/distributed-transaction-processing-system",
+      description: [
+        "Architected a transaction processing system using Multi-Paxos and Two-Phase Commit (2PC) protocols, processing 9000+ accounts across 3 sharded clusters with write-ahead logging for atomic rollback and resharding to reduce cross-shard transaction overhead",
+        "Built a fault-tolerant banking application with 9-node replication, implementing locking, leader election, and failure recovery to ensure ACID properties across concurrent transactions, achieving 150 txn/sec throughput and 100% transaction success rate"
+      ],
+      technologies: ["Go", "Multi-Paxos", "Two-Phase Commit", "Distributed Systems", "Fault Tolerance", "ACID", "Sharding", "Consensus"]
+    },
+    {
       title: "VideoXplore",
       category: "AI + Web Research",
       github: "https://github.com/ShivamMishra1603/video-xplore",
