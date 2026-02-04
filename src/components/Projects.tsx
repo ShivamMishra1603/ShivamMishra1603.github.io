@@ -16,6 +16,16 @@ const Projects = () => {
       technologies: ["LangGraph", "GPT-4", "ChromaDB", "FastAPI", "Next.js", "TypeScript", "Tailwind CSS", "AWS ECS", "Terraform", "Docker", "GitHub Actions", "WebSocket"]
     },
     {
+      title: "Financial Risk & Compliance Intelligence",
+      category: "Fine-Tuning, PyTorch, Hugging Face, Kubernetes",
+      github: "https://github.com/ShivamMishra1603/financial-risk-compliance-intelligence",
+      description: [
+        "Built a financial risk analysis system with an ETL pipeline to ingest SEC 10-K filings, using BeautifulSoup to transform HTML into SFT datasets; fine-tuned a Llama-3-8B LLM via PEFT/QLoRA, boosting ROUGE-L from 0.37 to 0.45 (+21%) and reducing hallucinations in generated outputs.",
+        "Deployed a containerized inference microservice using FastAPI, Docker, and Kubernetes with Prometheus/Grafana monitoring; validated system reliability via Locust load testing and optimized resource quotas to sustain <200ms p95 latency under peak load."
+      ],
+      technologies: ["docker", "kubernetes", "grafana", "prometheus", "pytorch", "fine-tuning", "mlops", "fastapi", "huggingface", "qlora", "llama3"]
+    },
+    {
       title: "Distributed Transaction Processing System",
       category: "Distributed Systems",
       github: "https://github.com/ShivamMishra1603/distributed-transaction-processing-system",
