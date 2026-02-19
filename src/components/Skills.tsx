@@ -1,125 +1,90 @@
 import { motion } from 'framer-motion'
 import {
-  SiHtml5,
-  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
   SiNodedotjs,
-  SiExpress,
   SiMongodb,
   SiPython,
   SiGit,
   SiGithub,
-  SiPostman,
-  SiVercel,
-  SiFigma,
-  SiCplusplus,
   SiPytorch,
   SiPandas,
   SiNumpy,
   SiScikitlearn,
   SiPostgresql,
-  SiJquery,
-  SiJson,
-  SiAppian,
   SiAmazon,
-  SiStreamlit,
-  SiFlask,
   SiDocker,
   SiNginx,
   SiHuggingface,
   SiGithubactions,
-  SiGooglecloud,
-  SiTailwindcss
+  SiGo,
+  SiFastapi,
+  SiApachekafka,
+  SiRedis,
+  SiKubernetes,
+  SiTerraform,
+  SiJenkins,
+  SiElasticsearch,
+  SiSpringboot,
+  SiNextdotjs,
 } from 'react-icons/si'
 import { FaJava, FaCode } from 'react-icons/fa'
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Programming Languages & Frameworks",
+      title: "Programming Languages",
       skills: [
         { name: "Python", icon: <SiPython /> },
-        { name: "C++", icon: <SiCplusplus /> },
         { name: "Java", icon: <FaJava /> },
-        { name: "PyTorch", icon: <SiPytorch /> },
-        { name: "Pandas", icon: <SiPandas /> },
-        { name: "NumPy", icon: <SiNumpy /> },
-        { name: "Scikit-learn", icon: <SiScikitlearn /> }
-      ]
-    },
-    {
-      title: "Web Technology",
-      skills: [
-        { name: "HTML", icon: <SiHtml5 /> },
-        { name: "CSS", icon: <SiCss3 /> },
-        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { name: "Go", icon: <SiGo /> },
         { name: "JavaScript", icon: <SiJavascript /> },
         { name: "TypeScript", icon: <SiTypescript /> },
+      ]
+    },
+    {
+      title: "Cloud & Backend",
+      skills: [
+        { name: "AWS", icon: <SiAmazon /> },
+        { name: "FastAPI", icon: <SiFastapi /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
-        { name: "jQuery", icon: <SiJquery /> },
-        { name: "JSON", icon: <SiJson /> },
-        { name: "React.js", icon: <SiReact /> },
-        { name: "Express.js", icon: <SiExpress /> }
+        { name: "Apache Kafka", icon: <SiApachekafka /> },
+        { name: "PostgreSQL", icon: <SiPostgresql /> },
+        { name: "MongoDB", icon: <SiMongodb /> },
+        { name: "Redis", icon: <SiRedis /> },
+        { name: "Spring Boot", icon: <SiSpringboot /> },
       ]
     },
     {
-      title: "AI/ML & LLM",
-      skills: [
-        { name: "Google Gemini", icon: <SiGooglecloud /> },
-        { name: "LangChain", icon: <FaCode /> },
-        { name: "Hugging Face", icon: <SiHuggingface /> },
-        { name: "FAISS", icon: <FaCode /> },
-        { name: "RAG", icon: <FaCode /> }
-      ]
-    },
-    {
-      title: "Data Apps & Visualization",
-      skills: [
-        { name: "Streamlit", icon: <SiStreamlit /> },
-        { name: "Flask", icon: <SiFlask /> },
-        { name: "Plotly", icon: <FaCode /> }
-      ]
-    },
-    {
-      title: "DevOps & Deployment",
+      title: "Infrastructure & DevOps",
       skills: [
         { name: "Docker", icon: <SiDocker /> },
+        { name: "Kubernetes", icon: <SiKubernetes /> },
+        { name: "Terraform", icon: <SiTerraform /> },
         { name: "Nginx", icon: <SiNginx /> },
-        { name: "GitHub Actions", icon: <SiGithubactions /> },
-        { name: "CI/CD", icon: <FaCode /> }
-      ]
-    },
-    {
-      title: "Geospatial",
-      skills: [
-        { name: "GeoPandas", icon: <SiPandas /> },
-        { name: "Folium", icon: <FaCode /> },
-        { name: "Shapely", icon: <FaCode /> }
-      ]
-    },
-    {
-      title: "Database",
-      skills: [
-        { name: "MongoDB", icon: <SiMongodb /> },
-        { name: "PostgreSQL", icon: <SiPostgresql /> }
-      ]
-    },
-    {
-      title: "Tools & Software",
-      skills: [
+        { name: "Jenkins", icon: <SiJenkins /> },
         { name: "Git", icon: <SiGit /> },
-        { name: "Github", icon: <SiGithub /> },
-        { name: "AWS", icon: <SiAmazon /> },
-        { name: "VS Code", icon: <FaCode /> },
-        { name: "Postman", icon: <SiPostman /> },
-        { name: "Vercel", icon: <SiVercel /> },
-        { name: "Render", icon: <FaCode /> },
-        { name: "Figma", icon: <SiFigma /> },
-        { name: "Appian", icon: <SiAppian /> }
+        { name: "GitHub Actions", icon: <SiGithubactions /> },
+        { name: "ELK Stack", icon: <SiElasticsearch /> },
       ]
-    }
+    },
+    {
+      title: "AI/ML & Frameworks",
+      skills: [
+        { name: "PyTorch", icon: <SiPytorch /> },
+        { name: "LangGraph", icon: <FaCode /> },
+        { name: "LangChain", icon: <FaCode /> },
+        { name: "NumPy", icon: <SiNumpy /> },
+        { name: "Pandas", icon: <SiPandas /> },
+        { name: "Hugging Face", icon: <SiHuggingface /> },
+        { name: "ChromaDB", icon: <FaCode /> },
+        { name: "Scikit-learn", icon: <SiScikitlearn /> },
+        { name: "React", icon: <SiReact /> },
+        { name: "Next.js", icon: <SiNextdotjs /> },
+        { name: "GitHub", icon: <SiGithub /> },
+      ]
+    },
   ]
 
   return (

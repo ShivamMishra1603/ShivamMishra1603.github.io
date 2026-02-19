@@ -183,21 +183,34 @@ const Projects = () => {
   ]
 
   const [currentPage, setCurrentPage] = useState(0)
-  const projectsPerPage = 4
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set())
+  const projectsPerPage = 3
   const totalPages = Math.ceil(projects.length / projectsPerPage)
 
   const nextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages)
+    setExpandedCards(new Set())
   }
 
   const prevPage = () => {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
+    setExpandedCards(new Set())
+  }
+
+  const toggleExpanded = (index: number) => {
+    setExpandedCards((prev) => {
+      const next = new Set(prev)
+      next.has(index) ? next.delete(index) : next.add(index)
+      return next
+    })
   }
 
   const visibleProjects = projects.slice(
     currentPage * projectsPerPage,
     (currentPage + 1) * projectsPerPage
   )
+
+  const COLLAPSED_HEIGHT = 320
 
   return (
     <section id="projects" className="py-20">
@@ -222,49 +235,68 @@ const Projects = () => {
             <FaChevronRight />
           </button>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {visibleProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-tertiary p-6 rounded-lg shadow-lg flex flex-col h-full"
-              >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold text-secondary">{project.title}</h3>
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-2xl hover:text-secondary transition-colors"
-                    >
-                      <FaGithub />
-                    </a>
-                  )}
-                </div>
-                <div className="mb-4">
-                  <span className="text-textSecondary">{project.category}</span>
-                </div>
-                <ul className="list-disc list-inside space-y-2 text-textSecondary mb-4 flex-grow">
-                  {project.description.map((desc, idx) => (
-                    <li key={idx} className="pl-4">{desc}</li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.technologies.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-primary text-secondary rounded-full text-sm"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visibleProjects.map((project, index) => {
+              const isExpanded = expandedCards.has(index)
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-tertiary rounded-lg shadow-lg flex flex-col"
+                >
+                  {/* Collapsible content area */}
+                  <div
+                    className="overflow-hidden transition-all duration-300 ease-in-out"
+                    style={{ height: isExpanded ? 'auto' : `${COLLAPSED_HEIGHT}px` }}
+                  >
+                    <div className="p-6">
+                      <div className="flex justify-between items-start mb-4">
+                        <h3 className="text-xl font-semibold text-secondary">{project.title}</h3>
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-2xl hover:text-secondary transition-colors ml-2 shrink-0"
+                          >
+                            <FaGithub />
+                          </a>
+                        )}
+                      </div>
+                      <div className="mb-3">
+                        <span className="text-textSecondary text-sm">{project.category}</span>
+                      </div>
+                      <ul className="list-disc list-inside space-y-2 text-textSecondary mb-4">
+                        {project.description.map((desc, idx) => (
+                          <li key={idx} className="pl-2">{desc}</li>
+                        ))}
+                      </ul>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 bg-primary text-secondary rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* See more / See less */}
+                  <button
+                    onClick={() => toggleExpanded(index)}
+                    className="w-full py-2 text-sm text-secondary hover:opacity-70 transition-opacity border-t border-primary"
+                  >
+                    {isExpanded ? 'See less ↑' : 'See more ↓'}
+                  </button>
+                </motion.div>
+              )
+            })}
           </div>
 
           {totalPages > 1 && (
@@ -272,7 +304,7 @@ const Projects = () => {
               {Array.from({ length: totalPages }, (_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrentPage(i)}
+                  onClick={() => { setCurrentPage(i); setExpandedCards(new Set()) }}
                   className={`w-2 h-2 rounded-full transition-all ${
                     currentPage === i ? 'bg-secondary w-4' : 'bg-textSecondary'
                   }`}

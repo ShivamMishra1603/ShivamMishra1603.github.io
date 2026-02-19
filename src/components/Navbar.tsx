@@ -73,7 +73,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: NavbarProps) => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-primary rounded-b-lg shadow-lg">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
