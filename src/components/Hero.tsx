@@ -16,13 +16,13 @@ const Hero = () => {
               Hi, I'm <span className="text-secondary">Shivam Mishra</span>
             </h1>
             <h2 className="text-2xl md:text-3xl text-textSecondary mb-6">
-              Master's Student in Computer Science
+              Master's Student in Computer Science at Stony Brook University
             </h2>
             <p className="text-lg text-textSecondary mb-8 text-justify">
-              I am a graduate student specializing in Machine Learning, Data Science, and AI-driven solutions 🤖📊. With a strong foundation in software engineering and hands-on experience in automation, computer vision, and full-stack development, I thrive in building intelligent systems that address real-world challenges 🌍✨.
+              I'm a Master's student in Computer Science at Stony Brook University with a focus on distributed systems, backend engineering, and applied AI. I have over three years of industry experience at Barclays, where I built scalable microservices and event-driven systems supporting business-critical financial workflows.
             </p>
             <p className="text-lg text-textSecondary mb-8 text-justify">
-              🎯 My goal is to contribute to cutting-edge projects while continuously growing as an AI/ML & Data Science professional. I am eager to apply my expertise in AI-driven technologies to solve complex problems, drive innovation, and make data-driven decisions that create a meaningful impact. 💡🚀
+              My recent work centers on LLM-powered systems, including multi-agent platforms, RAG pipelines, and model fine-tuning. I'm particularly interested in building reliable, high-performance systems that combine distributed infrastructure with intelligent decision-making.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
               <a
